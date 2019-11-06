@@ -1,0 +1,11 @@
+<% provide :title, t(".title") %>
+<h1 style="padding-top:10px"> <%= t ".title" %> </h1>
+
+<%= paginate @cats , theme: "twitter-bootstrap-3" %>
+
+<ul class="users">
+  <%= render @cats %>
+</ul>
+
+<%= paginate @cats , theme: "twitter-bootstrap-3" %>
+

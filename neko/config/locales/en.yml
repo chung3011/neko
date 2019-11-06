@@ -1,9 +1,9 @@
 en:
-  SampleApp: "Sample App"
+  name: "Mongu"
   signup: "Sign up now!"
   english: "English"
   vietnamese: "Vietnamese"
-  base_title: "Ruby on Rails Tutorial App"
+  base_title: "Cat & Food Restaurant"
   home: "Home"
   login: "Log in"
   form: "The form contains"
@@ -37,12 +37,6 @@ en:
       setting: "Settings"
       logout: "Log out"
       account: "Account"
-    footer:
-      the: "The"
-      by: "by"
-      link: "Ruby on Rails Tutorial"
-      link_1: "Michael Hartl"
-      link_2: "News"
   sessions:
     new:
       title: "Log in"
@@ -58,36 +52,11 @@ en:
       message: "Account not activated. Check your email for the activation link."
   static_pages:
     home:
-      title: "Sample App"
-      sentence_1: "This is the home page for the"
-      link_1: "Ruby on Rails Tutorial"
-      sentence_2: "sample application."
-      logo: "Rails logo"
-
-    help:
-      title: "Help"
-      sentence_1: "Get help on the Ruby on Rails Tutorial at the"
-      link_1: "Rails Tutorial help page"
-      sentence_2: "To get help on this sample app, see the"
-      link_2: "Ruby on Rails Tutorial"
-      sentence_3: "book"
-
-    about:
-      title:  "About"
-      sentence_1: "The"
-      link_1: "Ruby on Rails Tutorial"
-      sentence_2: "is a"
-      link_2: "book"
-      sentence_3: "and"
-      link_3: "screencast series"
-      sentence_4: "to teach web development with"
-      link_4: "Ruby on Rails"
-      sentence_5: "This is the sample application for the tutorial."
-
-    contact:
-      title: "Contact"
-      sentence_1: "Contact the Ruby on Rails Tutorial about the sample app at the"
-      link_1: "contact page"
+      title: "Mongu"
+    cat:
+      title: "Cat"
+    food:
+      title:  "Food"
 
   users:
     new:
@@ -99,7 +68,7 @@ en:
       password: "Password"
       confirmation: "Confirmation"
     create:
-      success: "Welcome to the Sample App!"
+      success: "Welcome to the Mongu Restaurant!"
       danger: "Create Failed"
       notice: "Please check your email to activate your account!"
     update:
@@ -140,7 +109,7 @@ en:
       subject: "Account activation"
       hi: "Hi"
       to: "to@example.org"
-      sentence_1: "Welcome to the Sample App! Click on the link below to activate your account:"
+      sentence_1: "Welcome to the Mongu Restaurant! Click on the link below to activate your account:"
     password_reset:
       reset: "Password reset"
       sentence_1: "To reset your password click the link below:"

@@ -1,31 +1,35 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container">
-    <%= link_to t("SampleApp"), root_path, id: "logo" %>
-        <nav>
-            <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to t("home"), root_path %></li>
-            <li><%= link_to t("static_pages.help.title"), help_path %></li>
-            <% if logged_in? %>
-                <li><%= link_to t(".user"), users_path %></li>
-                <li class="dropdown">
-                    <%= link_to "#", class: "dropdown-toggle",
-                        data: {toggle: "dropdown"} do %>
-                        <%= t ".account" %>
-                        <%= content_tag :b, "", class: "caret" %>
-                    <% end %>
-                    <ul class="dropdown-menu">
-                    <li><%= link_to t(".profile"), current_user %></li>
-                    <li><%= link_to t(".setting"), edit_user_path(current_user) %></li>
-                    <li class="divider"></li>
-                    <li>
-                        <%= link_to t(".logout"), logout_path, method: :delete %>
-                    </li>
-                    </ul>
-                </li>
-            <% else %>
-                <li><%= link_to t("login"), login_path %></li>
-            <% end %>
-            </ul>
-        </nav>
+<header class="navbar navbar-fixed-top" style="background-color: #F2E8CD; display: flex; justify-content:space-between">
+    <div class="container" style="display: flex; padding: 5px; align-items: center; width:45%; justify-content:center">
+		<%= link_to image_tag("icon.jpg", alt: t(".logo"), style: 'height: 80px'), root_path %>
+		<%= link_to t("name"), root_path, id: "logo" %>
     </div>
+	<div class="container" style="display: flex; align-items: center; width:50%; justify-content:center">
+		<nav style="font-size: 17px; color: #3B3829">
+			<ul class="nav navbar-nav navbar-right">
+			<li><%= link_to t("home"), root_path %></li>
+			<li><%= link_to t("static_pages.cat.title"), cat_path %></li>
+			<li><%= link_to t("static_pages.food.title"), food_path %></li>
+			<% if logged_in? %>
+				<li><%= link_to t(".user"), users_path %></li>
+				<li class="dropdown">
+					<%= link_to "#", class: "dropdown-toggle",
+						data: {toggle: "dropdown"} do %>
+						<%= t ".account" %>
+						<%= content_tag :b, "", class: "caret" %>
+					<% end %>
+					<ul class="dropdown-menu">
+					<li><%= link_to t(".profile"), current_user %></li>
+					<li><%= link_to t(".setting"), edit_user_path(current_user) %></li>
+					<li class="divider"></li>
+					<li>
+						<%= link_to t(".logout"), logout_path, method: :delete %>
+					</li>
+					</ul>
+				</li>
+			<% else %>
+				<li><%= link_to t("login"), login_path %></li>
+			<% end %>
+			</ul>
+		</nav>
+	</div>
 </header>

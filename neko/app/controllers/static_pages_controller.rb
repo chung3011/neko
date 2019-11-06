@@ -1,9 +1,12 @@
 class StaticPagesController < ApplicationController
   def home; end
 
-  def help; end
+  def cat
+	@cats = Cat.page(params[:page]).per Settings.per_page_item
+  end
 
-  def about; end
+  def food
+	@foods = Food.page(params[:page]).per Settings.per_page_item
+  end
 
-  def contact; end
 end

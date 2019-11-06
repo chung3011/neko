@@ -74,25 +74,10 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
   color: $gray-light;
-  a {
-    color:$gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
+  text-align: center;
+  height: 50px;
+  background-color: #F2E8CD;
 }
 
 /* miscellaneous */
@@ -267,4 +252,15 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+a {
+    color: #3B3829;
+    text-decoration: none;
+}
+
+.btn-primary {
+    color: #3B3829;
+    background-color: #F2E8CD;
+    border-color: #F2E8CD;
 }

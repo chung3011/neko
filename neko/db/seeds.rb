@@ -1,5 +1,5 @@
-User.create! name: "Example User",
-  email: "example@railstutorial.org",
+User.create! name: "Admin",
+  email: "admin@gmail.com",
   password: "foobar",
   password_confirmation: "foobar",
   admin: true,
@@ -14,10 +14,10 @@ User.create! name: "chung",
   activated: true,
   activated_at: Time.zone.now
 
-99.times do |n|
+10.times do |n|
   Faker::Config.locale = :vi
   name = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
+  email = "user#{n+1}@gmail.com"
   password = "password"
   User.create! name: name,
     email: email,
@@ -25,4 +25,20 @@ User.create! name: "chung",
     password_confirmation: password,
     activated: true,
     activated_at: Time.zone.now
+end
+
+10.times do |n|
+	Cat.create! name: Faker::Creature::Cat.name,
+	category: Faker::Creature::Cat.breed,
+	description: Faker::Creature::Cat.registry,
+	price: 9000,
+	available: true
+end
+
+10.times do |n|
+	Food.create! name: Faker::Food.dish,
+	category: "Appetizer",
+	description: Faker::Food.description,
+	price: 18000,
+	supportable: true
 end

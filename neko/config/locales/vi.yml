@@ -1,0 +1,167 @@
+vi:
+  SampleApp: "Ứng dụng mẫu"
+  signup: "Đăng kí ngay!"
+  english: "Tiếng Anh"
+  vietnamese: "Tiếng Việt"
+  base_title: "Ứng dụng mẫu hướng dẫn Ruby on Rails"
+  home: "Trang chủ"
+  login: "Đăng nhập"
+  form: "Biểu mẫu bao gồm"
+  error: "lỗi"
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Mật khẩu xác nhận"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+            email:
+              blank: "không được để trống"
+              invalid: "không hợp lệ"
+              taken: "đã tồn tại"
+            password:
+              blank: "không được để trống"
+              too_short: "quá ngắn (ít nhất 6 kí tự)"
+            password_confirmation:
+              confirmation: "không khớp với mật khẩu"
+  layouts:
+    header:
+      user: "Người dùng"
+      profile: "Hồ sơ"
+      setting: "Cài đặt"
+      logout: "Đăng xuất"
+      account: "Tài khoản"
+    footer:
+      the: " "
+      by: "bởi"
+      link: "Ruby on Rails Tutorial"
+      link_1: "Michael Hartl"
+      link_2: "Tin tức"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
+      ask: "Người dùng mới?"
+      remember: "Nhớ tôi trên máy tính này"
+      forgot: "(Quên mật khẩu)"
+    create:
+      notice: "Email/ Mật khẩu không hợp lệ"
+      user: "Xin chào người dùng"
+      admin: "Xin chào Admin"
+      message: "Tài khoản chưa được kích hoạt. Hãy kiểm tra link kích hoạt trong email của bạn."
+  static_pages:
+    home:
+      title: "Ứng dụng mẫu"
+      sentence_1: "Đây là trang chủ cho ứng dụng"
+      link_1: "Hướng dẫn về Ruby on Rails"
+      sentence_2: "."
+      logo: "Rails logo"
+
+    help:
+      title: "Trợ giúp"
+      sentence_1: "Tìm kiếm trợ giúp về Ruby on Rails Tutorial tại"
+      link_1: "Trang trợ giúp hướng dẫn Rails. "
+      sentence_2: "Tìm trợ giúp trên cùng app , tìm tại"
+      link_2: "Hướng dẫn về Ruby on Rails"
+      sentence_3: ""
+
+    about:
+      title: "Thông tin"
+      sentence_1: "Cuốn"
+      link_1: "Hướng dẫn về Ruby on Rails"
+      sentence_2: "là một"
+      link_2: "cuốn sách"
+      sentence_3: "và"
+      link_3: "chuỗi bài"
+      sentence_4: "để dạy phát triển web với"
+      link_4: "Ruby on Rails"
+      sentence_5: "Đây là ứng dụng mẫu cho hướng dẫn."
+
+    contact:
+      title: "Liên hệ"
+      sentence_1: "Liên hệ với hướng dẫn của Ruby on Rails về ứng dụng mẫu tại"
+      link_1: "trang liên hệ"
+    
+  users:
+    new:
+      signup: "Đăng kí"
+      sentence_1: "Trang đăng kí cho người dùng mới"
+      sentence_2: "Tạo tài khoản"
+      name: "Tên"
+      email: "Email"
+      password: "Mật khẩu"
+      confirmation: "Xác nhận mật khẩu"
+    create:
+      success: "Chào mừng tới ứng dụng!"
+      danger: "Đăng kí bị lỗi"
+      notice: "Hãy kiểm tra mail của bạn để kích hoạt tài khoản!"
+    update:
+      notice: "Hồ sơ đã được cập nhật!"
+    destroy:
+      success: "Đã xoá người dùng!"
+      danger: "Xoá lỗi!"
+      delete_admin: "Không thể xoá admin khác."
+    index:
+      title: "Danh sách người dùng"
+      notice: "Xin hãy đăng nhập!"
+    edit:
+      name: "Tên"
+      email: "Email"
+      password: "Mật khẩu"
+      confirmation: "Xác nhận mật khẩu"
+      title: "Thay đổi hồ sơ"
+      sentence_1: "Cập nhật hồ sơ"
+      sentence_2: "Lưu thay đổi"
+      sentence_3: "Thay đổi"
+      danger: "Bạn không có quyền thực hiện này"
+    user:
+      link_1: "Xoá"
+      notice: "Xác nhận?"
+    user_not_found: "Không tìm thấy người dùng!"
+  views:
+    pagination:
+      first: "« Đầu"
+      last: "Cuối »"
+      previous: "‹ Trước"
+      next: "Sau ›"
+      truncate: "…"
+  account_activations:
+    success: "Tài khoản được kích hoạt!"
+    fail: "Link kích hoạt không hợp lệ"
+  user_mailer:
+    account_activation:
+      subject: "Kích hoạt tài khoản"
+      hi: "Xin chào"
+      to: "to@example.org"
+      sentence_1: "Chào mừng tới ứng dụng mẫu! Nhấp vào link dưới đây để kích hoạt tài khoản:"
+    password_reset:
+      reset: "Đặt lại mật khẩu"
+      sentence_1: "Chọn vào đường link để đặt lại mật khẩu:"
+      sentence_2: "Đường link có hiệu lực trong 2 giờ"
+      sentence_3: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
+      link: "Đặt lại mật khẩu"
+  activate: "Kích hoạt"
+  password_resets:
+    create:
+      info: "Email được gửi với hướng dẫn đặt lại mật khẩu"
+      mail_not_found: "Không thấy địa chỉ mail"
+    update:
+      empty: "không được để trống"
+      success: "Mật khẩu đã được đặt lại."
+    expired: "Đặt lại mật khẩu hết hiêu lực."
+    user_not_found: "Không tìm thấy người dùng"
+    edit:
+      password: "Mật khẩu"
+      confirmation: "Xác nhận"
+      update: "Cập nhật mật khẩu"
+      title: "Đặt lại mật khẩu"
+    new:
+      submit: "Xác nhận"
+      title: "Quên mật khẩu"

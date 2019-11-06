@@ -1,44 +1,28 @@
-Cat.delete_all
-Cat.create(:name => 'aaa',
-	:category => 'aaa',
-    :description => 
-    %{
-        aaa
-    },
-	:price => 29.99,
-	:available => true,
-	:average_point => 5
-)
+User.create! name: "Example User",
+  email: "example@railstutorial.org",
+  password: "foobar",
+  password_confirmation: "foobar",
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now
 
-Cat.create(:name => 'bbb',
-	:category => 'bbb',
-    :description => 
-    %{
-        bbb
-    },
-	:price => 29.99,
-	:available => true,
-	:average_point => 5
-)
-Food.delete_all
-Food.create(:name => 'aaa',
-	:category => 'aaa',
-    :description => 
-    %{
-        aaa
-    },
-	:price => 29.99,
-	:supportable => true,
-	:average_point => 5
-)
-	
-Food.create(:name => 'aaa',
-	:category => 'aaa',
-    :description => 
-    %{
-        aaa
-    },
-	:price => 29.99,
-	:supportable => true,
-	:average_point => 5
-)
+User.create! name: "chung",
+  email: "chung@gmail.com",
+  password: "123456",
+  password_confirmation: "123456",
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now
+
+99.times do |n|
+  Faker::Config.locale = :vi
+  name = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  User.create! name: name,
+    email: email,
+    password: password,
+    password_confirmation: password,
+    activated: true,
+    activated_at: Time.zone.now
+end

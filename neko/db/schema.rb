@@ -10,38 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_032732) do
-
-  create_table "cats", force: :cascade do |t|
-    t.string "name"
-    t.string "category"
-    t.string "description"
-    t.decimal "price"
-    t.boolean "available"
-    t.decimal "average_point"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "foods", force: :cascade do |t|
-    t.string "name"
-    t.string "category"
-    t.string "description"
-    t.decimal "price"
-    t.boolean "supportable"
-    t.decimal "average_point"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2019_07_12_015151) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "hashed_password"
-    t.string "salt"
-    t.datetime "date_of_birth"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
+    t.string "remember_digest"
+    t.boolean "admin", default: false
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end

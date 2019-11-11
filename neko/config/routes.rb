@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root "static_pages#home"
   get "/cat", to: "static_pages#cat"
   get "/food", to: "static_pages#food"
+  get "/detail_cat", to: "static_pages#detail_cat"
+  get "/detail_food", to: "static_pages#detail_food"
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
   get "/login", to: "sessions#new"

@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_133817) do
+ActiveRecord::Schema.define(version: 2019_11_20_162136) do
+
+  create_table "cat_images", force: :cascade do |t|
+    t.string "link"
+    t.integer "cat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cat_rates", force: :cascade do |t|
+    t.integer "rate_point"
+    t.string "comment"
+    t.integer "user_id"
+    t.integer "cat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cats", force: :cascade do |t|
     t.string "name"
@@ -20,6 +36,23 @@ ActiveRecord::Schema.define(version: 2019_11_06_133817) do
     t.boolean "available"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "point"
+  end
+
+  create_table "food_images", force: :cascade do |t|
+    t.string "link"
+    t.integer "food_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "food_rates", force: :cascade do |t|
+    t.integer "rate_point"
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "food_id"
+    t.integer "user_id"
   end
 
   create_table "foods", force: :cascade do |t|
@@ -30,11 +63,13 @@ ActiveRecord::Schema.define(version: 2019_11_06_133817) do
     t.boolean "supportable"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "point"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.date "date_of_birth"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
@@ -45,6 +80,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_133817) do
     t.datetime "activated_at"
     t.string "reset_digest"
     t.datetime "reset_sent_at"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

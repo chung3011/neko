@@ -4,7 +4,7 @@ en:
   english: "English"
   vietnamese: "Vietnamese"
   base_title: "Cat & Food Restaurant"
-  home: "Home"
+  home: "HOME"
   login: "Log in"
   form: "The form contains"
   error: "error"
@@ -34,7 +34,7 @@ en:
     header:
       user: "Users"
       profile: "Profile"
-      setting: "Settings"
+      setting: "Edit"
       logout: "Log out"
       account: "Account"
   sessions:
@@ -54,9 +54,9 @@ en:
     home:
       title: "Mongu"
     cat:
-      title: "Cat"
+      title: "CAT"
     food:
-      title:  "Food"
+      title:  "FOOD"
 
   users:
     new:

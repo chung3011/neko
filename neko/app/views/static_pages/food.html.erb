@@ -1,9 +1,7 @@
 <% provide :title, t(".title") %>
 <h1 style="padding-top:10px"> <%= t ".title" %> </h1>
 
-<%= paginate @foods , theme: "twitter-bootstrap-3" %>
-
-<ul class="users">
+<ul style="display:flex; flex-wrap: wrap; justify-content:space-between">
   <%= render @foods %>
 </ul>
 

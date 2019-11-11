@@ -34,7 +34,7 @@ en:
     header:
       user: "Users"
       profile: "Profile"
-      setting: "Settings"
+      setting: "Edit"
       logout: "Log out"
       account: "Account"
   sessions:

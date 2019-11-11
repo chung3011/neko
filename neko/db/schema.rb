@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_133817) do
+ActiveRecord::Schema.define(version: 2019_11_11_140542) do
+
+  create_table "cat_images", force: :cascade do |t|
+    t.string "link"
+    t.integer "cat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cats", force: :cascade do |t|
     t.string "name"
@@ -18,6 +25,14 @@ ActiveRecord::Schema.define(version: 2019_11_06_133817) do
     t.string "description"
     t.integer "price"
     t.boolean "available"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "point"
+  end
+
+  create_table "food_images", force: :cascade do |t|
+    t.string "link"
+    t.integer "food_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_133817) do
     t.boolean "supportable"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "point"
   end
 
   create_table "users", force: :cascade do |t|

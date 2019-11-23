@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :foods, only: [:index]
+  resources :food_bookings, only: [:create, :update, :destroy]
+  resource :cart, only: [:show]
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root "static_pages#home"
   get "/cat", to: "static_pages#cat"

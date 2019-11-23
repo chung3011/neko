@@ -73,6 +73,9 @@ cats.each do |cat|
     CatRate.create! comment: Faker::Lorem.sentence,
       user_id: user.id,
 	  cat_id: cat.id,
-	  rate_point: rand(1..5)
+	  rate_point: rand(0..1)
   end
 end
+
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Done"

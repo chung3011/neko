@@ -4,6 +4,16 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
 
+  helper_method :current_order
+
+  def current_order
+    if !session[:order_id].nil?
+      Order.find(session[:order_id])
+    else
+      Order.new
+    end
+  end
+
   private
   def set_locale
     locale = params[:locale].to_s.strip.to_sym

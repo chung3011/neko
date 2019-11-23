@@ -1,0 +1,18 @@
+<% if !@food_booking.nil? && @food_booking.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+    <% @food_booking.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<% if @food_bookings.size == 0 %>
+  <p class="text-center">
+    There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
+  </p>
+<% else %>
+  <% @food_bookings.each do |food_booking| %>
+    <%= render 'carts/cart_row', food: food_booking.food, food_booking: food_booking, show_total: true %>
+  <% end %>
+<% end %>

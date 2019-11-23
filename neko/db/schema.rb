@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_162136) do
+ActiveRecord::Schema.define(version: 2019_11_23_082133) do
 
   create_table "cat_images", force: :cascade do |t|
     t.string "link"
@@ -39,6 +39,18 @@ ActiveRecord::Schema.define(version: 2019_11_20_162136) do
     t.integer "point"
   end
 
+  create_table "food_bookings", force: :cascade do |t|
+    t.integer "food_id"
+    t.integer "order_id"
+    t.integer "unit_price"
+    t.integer "quantity"
+    t.integer "total_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["food_id"], name: "index_food_bookings_on_food_id"
+    t.index ["order_id"], name: "index_food_bookings_on_order_id"
+  end
+
   create_table "food_images", force: :cascade do |t|
     t.string "link"
     t.integer "food_id"
@@ -64,6 +76,25 @@ ActiveRecord::Schema.define(version: 2019_11_20_162136) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "point"
+  end
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "cat_id"
+    t.datetime "arrived_time"
+    t.integer "subtotal"
+    t.integer "total"
+    t.integer "order_status_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

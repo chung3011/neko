@@ -77,5 +77,3 @@ cats.each do |cat|
   end
 end
 
-OrderStatus.create! id: 1, name: "In Progress"
-OrderStatus.create! id: 2, name: "Done"

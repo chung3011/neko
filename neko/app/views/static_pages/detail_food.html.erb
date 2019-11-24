@@ -45,7 +45,7 @@
 					<% end %>
 				</div>
 			</div>
-			<button type="button" class="btn btn-primary btn-sm">Order</button>
+			<%= button_to 'Add to cart', line_items_path(food_id: @food), class: 'btn btn-primary btn-sm' %>
 		</div>
 	</div>
 	

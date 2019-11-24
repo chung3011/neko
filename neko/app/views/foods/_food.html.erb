@@ -25,6 +25,6 @@
     <% end %>
 	<h4><%= link_to food.name , detail_food_path(id: food.id) %><h4>
 	<h5><%= number_to_currency(food.price , unit: "VND", format: "%n %u", precision: 0) %><h5>
-	<button type="button" class="btn btn-primary btn-sm">Order</button>
+	<%= button_to 'Add to cart', line_items_path(food_id: food), class: 'btn btn-primary btn-sm' %>
   <hr>
 </div>

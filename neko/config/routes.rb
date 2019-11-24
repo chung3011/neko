@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  get 'foods/index'
+  resources :line_items
+  resources :carts
   resources :foods, only: [:index]
-  resources :food_bookings, only: [:create, :update, :destroy]
-  resource :cart, only: [:show]
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root "static_pages#home"
   get "/cat", to: "static_pages#cat"

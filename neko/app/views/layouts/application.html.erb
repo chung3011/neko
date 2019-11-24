@@ -15,9 +15,14 @@
 
   <body>
     <%= render "layouts/header" %>
+	
     <div class="container">
       <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+	  	<% if message_type %>
+		   <%= content_tag(:div, message, class: "alert alert-success") %>
+		<% else %>
+       		<%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+		<% end %>
       <% end %>
       <%= yield %>
     </div>

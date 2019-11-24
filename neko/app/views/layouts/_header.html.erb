@@ -18,6 +18,18 @@
 			<%= link_to t("static_pages.food.title"), food_path %>
 		</li>	  
 		<% if logged_in? %>
+			
+				<% if total_cart_items %>
+					<%= link_to cart_path(@cart), class:"navbar-item button is-warning" do %>
+						<span class="icon is-small">
+							<i class="fa fa-shopping-cart"></i>
+						</span>
+						<span>
+							<%= cart_count_over_one %>
+						</span>
+					<% end %>
+				<% end %>
+			
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family: 'Quicksand', sans-serif;">
 					<%= current_user.name %>

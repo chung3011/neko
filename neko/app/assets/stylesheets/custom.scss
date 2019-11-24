@@ -303,7 +303,7 @@ h3 {
 	display: flex;
 	justify-content: space-around;
 	background-color: $main-light;
-	height: 250px;
+	height: 220px;
 }
 
 .box{
@@ -351,4 +351,13 @@ h3 {
 	color: $gray-light;
 }
 
-
+.cart{
+	display: flex;
+	justify-content: space-around;
+}
+.cart .product{
+	width: 60%;
+}
+.cart .price{
+	width: 30%;
+}
